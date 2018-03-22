@@ -1,0 +1,16 @@
+extends ../templates/default/template.pug
+
+block head
+	- var path = '';
+	- var pageTitle = 'Главная страница';
+	- var pageDescription = 'Описание главной страницы';
+
+block content
+	main.page-main
+
+		h1 Главная страница
+
+		p Lorem ipsum&nbsp;&mdash; классическая панграмма, условный, зачастую бессмысленный текст-заполнитель, вставляемый в&nbsp;макет страницы. Используется в&nbsp;качестве заполнителя по&nbsp;крайней мере с&nbsp;XVI&nbsp;века. Является искажённым отрывком из&nbsp;философского трактата Марка Туллия Цицерона &laquo;О&nbsp;пределах добра и&nbsp;зла&raquo;, написанного в&nbsp;45&nbsp;году до&nbsp;н.&nbsp;э.&nbsp;на&nbsp;латинском языке, обнаружение сходства атрибутируется Ричарду МакКлинтоку.
+
+		include ../../blocks/textarea/textarea.pug
+		

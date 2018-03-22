@@ -1,0 +1,41 @@
+clearfix()
+	zoom 1
+	&:after
+	&:before
+		content ""
+		display table
+	&:after
+		clear both
+
+/* Миксин для обрезки текста с многоточием */
+text-ellipsis()
+	overflow hidden
+	text-overflow ellipsis
+	white-space nowrap
+
+/* debug */
+x(color)
+	outline 2px solid color
+	outline-offset -2px
+
+
+/* ===================================================================================================================================================================================================
+
+		Изменение велечены текста в приделах заданных размеров, относительно viewport экрана.
+
+		Используется формула Mike Riethmuller:
+		font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+		Пример:
+		font-size calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320)))
+
+		https://madebymike.com.au/writing/fluid-type-calc-examples/
+		https://webformyself.com/zhidkaya-tipografika/
+
+  ==================================================================================================================================================================================================== */
+
+$setResponsiveFont($smallFont, $bigFont, $smallViewport, $bigViewport)
+	font-size "calc(%s%s + (%s - %s) * ((100vw - %s%s) / (%s - %s)))" \
+	% ($smallFont px $bigFont $smallFont $smallViewport px $bigViewport $smallViewport)
+	
+/* =================================================================================== */

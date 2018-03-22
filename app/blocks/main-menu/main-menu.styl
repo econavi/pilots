@@ -1,0 +1,33 @@
+.main-menu
+	&__list
+		font-size 0
+		list-style-type none
+	&__item
+		display inline-block
+		vertical-align top
+		font-size 1.6rem
+		line-height 2rem
+	
+	&__link
+		display block
+		padding 25px 20px
+		text-decoration none
+		
+		&:hover
+			background #242424
+			transition background 0.2s
+		
+		&_active
+			position relative
+			
+			&:hover
+				background none
+			
+			&::after
+				content ''
+				position absolute
+				right 20px
+				bottom 0
+				left 20px
+				height 5px
+				background-color red
