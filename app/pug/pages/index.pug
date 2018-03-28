@@ -6,11 +6,29 @@ block head
 	- var pageDescription = 'Описание главной страницы';
 
 block content
-	main.page-main
+	.container
+		header.header
+			a(href='javascript:void(0);').logo.header__logo Test
+			.header__menu-switcher
+				.menu-switcher
+			.header__menu
+				include ../../blocks/main-menu/main-menu.pug
 
-		h1 Главная страница
+		main.main-content
+			.main-content__item.main-content-left
+				h1.title-main Тестовое задание
+				.main-content-left__button 
+					button.button Button
+			
+			.main-content__item.main-content-right
+				h2.title Заголовок
+				p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
+				.main-content-right__button 
+					button.button Button
 
-		p Lorem ipsum&nbsp;&mdash; классическая панграмма, условный, зачастую бессмысленный текст-заполнитель, вставляемый в&nbsp;макет страницы. Используется в&nbsp;качестве заполнителя по&nbsp;крайней мере с&nbsp;XVI&nbsp;века. Является искажённым отрывком из&nbsp;философского трактата Марка Туллия Цицерона &laquo;О&nbsp;пределах добра и&nbsp;зла&raquo;, написанного в&nbsp;45&nbsp;году до&nbsp;н.&nbsp;э.&nbsp;на&nbsp;латинском языке, обнаружение сходства атрибутируется Ричарду МакКлинтоку.
+		.slider-controls
 
-		include ../../blocks/textarea/textarea.pug
-		
+	//- video
+	//- 	source(src="video.mp4" type="video/mp4")
+	//- 	source(src="video.ogv" type="video/ogg")
+	//- 	source(src="video.webm" type="video/webm")

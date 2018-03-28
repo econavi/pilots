@@ -1,0 +1,81 @@
+.header
+	position relative
+	margin-top 4.2%
+	padding-right 50px
+	
+	+above($media-mobil-menu-is-hidded)
+		display flex
+		justify-content space-between
+		align-items baseline
+		flex-wrap wrap
+		
+		padding-right 0
+	
+	&__logo
+		margin-right $space-xxxl
+	
+	&__menu-switcher
+		position absolute
+		top 0
+		right 0
+		
+		width 40px
+		height 40px
+		
+		+above($media-mobil-menu-is-hidded)
+			display none
+	
+	&__menu
+		+below($media-mobil-menu-is-hidded)
+			position absolute
+			top 0
+			left 0
+			
+			display none
+			width 100%
+			min-height 100vh
+			padding 50px
+			
+			text-align center
+			
+			background $color-primary
+			border-bottom 5px solid $color-secondary
+			
+			&_show-start
+				visibility hidden
+			
+			&_isShowed
+				animation-name: showElem;
+				animation-duration: $transition-default
+				animation-fill-mode: forwards;
+
+			&_isHidden
+				animation-name: hideElem;
+				animation-duration: $transition-default
+				animation-fill-mode: forwards;
+
+@keyframes showElem {
+  0% {
+			transform: translateY(-100%)
+			opacity: 0
+			
+  	 }   
+  100% { 
+				transform: translateY(0)
+				opacity: 1
+  		}
+}
+@keyframes hideElem {
+  0% {
+			transform: translateY(0)
+			
+  	 }   
+  100% { 
+			transform: translateY(-100%)
+  		}
+}
+
+
+
+
+

@@ -2,32 +2,56 @@
 	&__list
 		font-size 0
 		list-style-type none
+	
 	&__item
-		display inline-block
-		vertical-align top
-		font-size 1.6rem
-		line-height 2rem
+		display block
+		margin-right 0
+		margin-bottom 20px
+		
+		&:last-child
+			margin-right 0
+		
+		+above($media-mobil-menu-is-hidded)
+			display inline-block
+			vertical-align top
+			margin-right $space-l
+			margin-bottom 0
 	
 	&__link
+		position relative
 		display block
-		padding 25px 20px
+		
+		font-family $font-family-secondary-bold
+		font-size $font-size-s
+		line-height $line-height-default
+		
+		text-transform uppercase
 		text-decoration none
+		letter-spacing $space-xxxxxs
 		
-		&:hover
-			background #242424
-			transition background 0.2s
+		color $color-default
 		
-		&_active
-			position relative
-			
-			&:hover
-				background none
-			
-			&::after
+		overflow hidden
+		
+		
+		+above($media-mobil-menu-is-hidded)
+			&::before
 				content ''
 				position absolute
-				right 20px
 				bottom 0
-				left 20px
-				height 5px
-				background-color red
+				left 0
+				width 100%
+				height 2px
+				background $color-secondary
+				transform translateX(-101%)
+				transition transform $transition-default
+
+		&:hover
+			color $color-secondary
+			
+			&::before
+				transform translateX(0)
+
+		&:active
+			&::before
+				opacity 0

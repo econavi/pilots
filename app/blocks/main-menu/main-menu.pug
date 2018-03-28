@@ -1,33 +1,27 @@
 -
 	var list = [
 
-		{	name: 'Главная',
-			url: '/'
-		},
-		
-		{	name: 'Раздел первого уровня',
-			url: '/lev1/'
-		},
-		
-		{	name: 'Раздел второго уровня',
-			url: '/lev1/lev2/'
-		},
-		
-		{	name: 'Ссылка',
+		{	name: 'Menu',
 			url: 'javascript:void(0);'
 		},
 		
-		{	name: 'Ссылка',
+		{	name: 'Menu',
+			url: 'javascript:void(0);'
+		},
+		
+		{	name: 'Menu',
+			url: 'javascript:void(0);'
+		},
+		
+		{	name: 'Menu',
 			url: 'javascript:void(0);'
 		}
-
 	];
 
 
 mixin navItem(url, name)
 	li.main-menu__item
 		a.main-menu__link(href=url)= name
-
 
 nav.main-menu
 	ul.main-menu__list

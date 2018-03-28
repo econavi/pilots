@@ -1,0 +1,61 @@
+.menu-switcher
+	$font-size = $font-size-s
+	$text-color = $color-secondary
+	$icon-color = $color-secondary
+	
+	position relative
+	
+	margin 0
+	padding 1em 0
+	padding-left 1.5em
+	z-index 1
+	
+	font-family $font-family
+	font-size $font-size
+	font-weight bold
+	line-height 1
+	text-transform uppercase
+	
+	color $text-color
+	border 0
+	background none
+	
+	cursor pointer
+	
+	&::before
+		content ''
+		position absolute
+		top 50%
+		left 50%
+		
+		display block
+		width 1em
+		height 0.18em
+		
+		background $icon-color
+		
+		transform translate(-50%, -50%)
+		box-shadow 0 0.4em $icon-color, 0 -0.4em $icon-color
+	
+	&_isOpend
+		&::before,
+		&::after
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			
+			display block
+			width 1em
+			height 0.20em
+			
+			background $icon-color
+			box-shadow none
+		
+		&::before
+			transform translateX(-50%) rotate(45deg)
+			transition transform $transition-default
+		
+		&::after
+			transform translateX(-50%) rotate(-45deg)
+			transition transform $transition-default
