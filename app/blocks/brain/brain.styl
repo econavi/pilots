@@ -1,0 +1,39 @@
+.brain
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	z-index $z-brain
+	
+	display block
+	width 48%
+	
+	background $color-primary
+	border-radius 50%
+	box-shadow 0 0 0 200px rgba($color-primary, .43)
+	
+	&__inner
+		position relative
+		
+		display block
+		padding-top 100%
+	
+	&__pic
+		position absolute
+		top 0
+		left 0
+		
+		display flex
+		width 100%
+		height 100%
+		
+		overflow hidden
+	
+	&__himself
+		width 50%
+		height auto
+		margin auto
+		fill $color-default
+	
+	&__animate-element
+		fill $color-main	

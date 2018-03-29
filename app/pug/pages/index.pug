@@ -6,29 +6,40 @@ block head
 	- var pageDescription = 'Описание главной страницы';
 
 block content
-	.container
-		header.header
-			a(href='javascript:void(0);').logo.header__logo Test
-			.header__menu-switcher
-				.menu-switcher
-			.header__menu
-				include ../../blocks/main-menu/main-menu.pug
+	.hero
+		.container
+			header.header
+				a(href='javascript:void(0);').logo.header__logo Test
+				.header__menu-switcher
+					.menu-switcher
+				.header__menu
+					include ../../blocks/main-menu/main-menu.pug
 
-		main.main-content
-			.main-content__item.main-content-left
-				h1.title-main Тестовое задание
-				.main-content-left__button 
-					button.button Button
-			
-			.main-content__item.main-content-right
-				h2.title Заголовок
-				p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
-				.main-content-right__button 
-					button.button Button
+			main.main-content
+				.main-content__item.main-content-left
+					h1.title-main Тестовое задание
+					.main-content-left__button 
+						button.button Button
+				
+				//- .main-content__item.main-content-right
+				//- 	h2.title Заголовок
+				//- 	p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
+				//- 	.main-content-right__button 
+				//- 		button.button Button
 
-		.slider-controls
+			.slider-controls
+	
+	.brain
+		.brain__inner
+			.brain__pic
+				include ../../blocks/brain/brain.pug
 
-	//- video
-	//- 	source(src="video.mp4" type="video/mp4")
-	//- 	source(src="video.ogv" type="video/ogg")
-	//- 	source(src="video.webm" type="video/webm")
+
+	.video
+		.video__inner
+			video.video__clip
+				source(src="video.mp4" type="video/mp4")
+				source(src="video.ogv" type="video/ogg")
+				source(src="video.webm" type="video/webm")
+	
+	.bg-layer
