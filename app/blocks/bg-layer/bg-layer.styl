@@ -7,4 +7,6 @@
 	z-index $z-bg-layer
 	
 	background $color-default
-	transform translateX(-54%)
+	
+	+below($media-mobil-menu-is-hidded)
+		background $color-primary

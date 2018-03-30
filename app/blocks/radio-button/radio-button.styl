@@ -1,0 +1,23 @@
+.radio-button
+	display inline-block
+	
+	font-size 0
+	line-height 0
+	
+	&__fake
+		display none
+	
+	&__custom
+		display inline-block
+		width 13px
+		height 13px
+		
+		border 1px solid $color-secondary
+		border-radius 50%
+
+	&__fake:checked + &__custom
+		border none
+		background $color-main
+		box-shadow 0 0 0 5px $color-main
+		
+		

@@ -38,8 +38,11 @@
 			
 			text-align center
 			
-			background $color-primary
+			background $color-default
 			border-bottom 5px solid $color-secondary
+			
+			+below($media-mobil-menu-is-hidded)
+				background $color-primary
 			
 			&_show-start
 				visibility hidden

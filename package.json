@@ -40,6 +40,7 @@
     "happypack": "^4.0.0-beta.1",
     "jquery": "^3.2.1",
     "rupture": "^0.6.2",
+    "split-html-to-chars": "^1.0.5",
     "stylint-stylish": "^1.4.0",
     "svg4everybody": "^2.1.8",
     "vinyl-named": "^1.1.0",

@@ -1,16 +1,19 @@
 .brain
-	position absolute
+	position fixed
 	top 50%
 	left 50%
 	transform translate(-50%, -50%)
 	z-index $z-brain
 	
 	display block
-	width 48%
+	width 94vh
 	
 	background $color-primary
 	border-radius 50%
 	box-shadow 0 0 0 200px rgba($color-primary, .43)
+		
+	+below($media-mobil-menu-is-hidded)
+		display none
 	
 	&__inner
 		position relative
@@ -34,6 +37,9 @@
 		height auto
 		margin auto
 		fill $color-default
+		
+		+below($media-l)
+			display none
 	
 	&__animate-element
 		fill $color-main	
