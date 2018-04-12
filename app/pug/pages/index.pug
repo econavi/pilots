@@ -14,34 +14,36 @@ block content
 					.menu-switcher
 				.header__menu
 					include ../../blocks/main-menu/main-menu.pug
+			
+			main.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.content
+							section.content__item.content-left
+								h1.title-main Тестовое задание
+								.content-left__button 
+									button.button Button
+							
+							section.content__item.content-right
+								h2.title Заголовок
+								p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
+								.content-right__button 
+									button.button Button
 
-			main.main-content
-				.main-content__item.main-content-left
-					h1.title-main Тестовое задание
-					.main-content-left__button 
-						button.button Button
-				
-				.main-content__item.main-content-right
-					h2.title Заголовок
-					p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
-					.main-content-right__button 
-						button.button Button
+					.swiper-slide
+						.content
+							section.content__item.content-right
+								h2.title Заголовок
+								p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
+								.content-right__button 
+									button.button Button
 
-			.slider-controls
-				.slider-controls__item
-					label.radio-button
-						input.radio-button__fake(type='radio' name='radio' checked)
-						span.radio-button__custom
-				.slider-controls__item
-					label.radio-button
-						input.radio-button__fake(type='radio' name='radio')
-						span.radio-button__custom
+			.swiper-pagination
 	
 	.brain
 		.brain__inner
 			.brain__pic
 				include ../../blocks/brain/brain.pug
-
 
 	.video
 		.video__inner
@@ -50,4 +52,31 @@ block content
 				source(src="video.ogv" type="video/ogg")
 				source(src="video.webm" type="video/webm")
 	
-	.bg-layer
+	//- backgrounds for animation
+	.bg-behind-brain
+		.bg-behind-brain__inner
+
+	.bg-behind-brain.bg-behind-brain_big
+		.bg-behind-brain__inner
+	
+	.bg-curtain
+	
+	.bg-circle-from-left.bg-circle-from-left_big
+	.bg-circle-from-left.bg-circle-from-left_medium
+	.bg-circle-from-left.bg-circle-from-left_small
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

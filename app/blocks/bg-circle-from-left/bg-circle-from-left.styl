@@ -1,0 +1,42 @@
+.bg-circle-from-left
+	position fixed
+	top 50%
+	left 0
+	
+	display block
+	width 100vh
+	height 100vh
+	
+	border-radius 50%
+	// border-width 20vh
+	// border-style solid
+
+	transform translate(-50%, -50%) scale(0)
+	
+	&_big
+		z-index $bg-circle-from-left_big
+
+		width 180vh
+		height 180vh
+		
+		background rgba($color-default, 0.3)
+		// border-color rgba($color-default, 0.3)
+		// background-clip padding-box
+		
+		
+	&_medium
+		z-index $bg-circle-from-left_medium
+		
+		width 140vh
+		height 140vh
+		
+		background rgba($color-default, 0.5)
+		// border-color rgba($color-default, 0.5)
+		// background-clip padding-box
+	
+	&_small
+		z-index $bg-circle-from-left_small
+		// border none
+		background-color transparent
+		background-color yellow
+		

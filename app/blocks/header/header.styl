@@ -1,6 +1,5 @@
 .header
 	position relative
-	padding-top 4.2%
 	padding-right 50px
 	
 	+above($media-mobil-menu-is-hidded)
@@ -18,6 +17,7 @@
 		position absolute
 		top 0
 		right 0
+		z-index $z-header__menu-switcher
 		
 		width 40px
 		height 40px
@@ -30,6 +30,7 @@
 			position absolute
 			top 0
 			left 0
+			z-index $z-header__menu
 			
 			display none
 			width 100%
@@ -56,6 +57,25 @@
 				animation-name: hideElem;
 				animation-duration: $transition-default
 				animation-fill-mode: forwards;
+	
+.no-js .header
+	+below($media-mobil-menu-is-hidded)
+		padding-right 0
+
+.no-js .header__menu
+	+below($media-mobil-menu-is-hidded)
+		position static
+		
+		display block
+		min-height auto
+		padding-bottom 10px
+		
+		border-bottom none
+
+.no-js .header__menu-switcher
+	+below($media-mobil-menu-is-hidded)
+		display none
+
 
 @keyframes showElem {
   0% {
