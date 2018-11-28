@@ -1,80 +1,66 @@
 extends ../templates/default/template.pug
 
 block head
-	- var path = '';
-	- var pageTitle = 'Главная страница';
-	- var pageDescription = 'Описание главной страницы';
+  - var path = '';
+  - var pageTitle = 'Главная страница';
+  - var pageDescription = 'Описание главной страницы';
 
 block content
-	.hero
-		.container
-			header.header
-				a(href='javascript:void(0);').logo.header__logo Test
-				.header__menu-switcher
-					.menu-switcher
-				.header__menu
-					include ../../blocks/main-menu/main-menu.pug
-			
-			main.swiper-container
-				.swiper-wrapper
-					.swiper-slide.content
-						section.content__cell.content-cell-left
-							h1.title-main Тестовое задание
-							.content-cell-left__button 
-								button.button Button
-						
-						section.content__cell.content-cell-right
-							h2.title Заголовок
-							p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
-							.content-cell-right__button 
-								button.button Button
+  .hero
+    .container
+      header.header
+        a(href='javascript:void(0);').logo.header__logo Test
+        .header__menu-switcher
+          .menu-switcher
+        .header__menu
+          include ../../blocks/main-menu/main-menu.pug
+      
+      main.swiper-container
+        .swiper-wrapper
+          .swiper-slide.content
+            section.content__cell.content-cell-left
+              h1.title-main Тестовое задание
+              .content-cell-left__button 
+                button.button Button
+            
+            section.content__cell.content-cell-right
+              h2.title Заголовок
+              p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
+              .content-cell-right__button 
+                button.button Button
 
-					.swiper-slide.content
-						section.content__cell.content-cell-right
-							h2.title Заголовок
-							p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
-							.content-cell-right__button 
-								button.button Button
+          .swiper-slide.content
+            section.content__cell.content-cell-right
+              h2.title Заголовок
+              p.text С другой стороны новая модель организационной деятельности позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас анализа новых предложений. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по 
+              .content-cell-right__button 
+                button.button Button
 
-			.swiper-pagination
-	
-	.brain
-		.brain__inner
-			.brain__pic
-				include ../../blocks/brain/brain.pug
+      .swiper-pagination
+  
+  .brain
+    .brain__inner
+      .brain__pic
+        include ../../blocks/brain/brain.pug
 
-	.video
-		.video__inner
-			video.video__clip
-				source(src="video.mp4" type="video/mp4")
-				source(src="video.ogv" type="video/ogg")
-				source(src="video.webm" type="video/webm")
-	
-	//- backgrounds for animation
-	.bg-behind-brain
-		.bg-behind-brain__inner
+  .video
+    .video__inner
+      video.video__clip(muted)
+        source(src="video.mp4" type="video/mp4")
+        source(src="video.ogv" type="video/ogg")
+        source(src="video.webm" type="video/webm")
+  
+  //- backgrounds for animation
+  .bg-behind-brain
+    .bg-behind-brain__inner
 
-	.bg-behind-brain.bg-behind-brain_big
-		.bg-behind-brain__inner
-	
-	.bg-curtain
-	
-	.bg-circle-from-left.bg-circle-from-left_big
-	.bg-circle-from-left.bg-circle-from-left_medium
-	.bg-circle-from-left.bg-circle-from-left_small
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .bg-behind-brain.bg-behind-brain_big
+    .bg-behind-brain__inner
+  
+  .bg-curtain
+  
+  .bg-circle-from-left.bg-circle-from-left_big
+  .bg-circle-from-left.bg-circle-from-left_medium
+  .bg-circle-from-left.bg-circle-from-left_small
+  
+  
